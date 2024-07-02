@@ -22,7 +22,8 @@ const payload = {
 	invoice: {
 		number: 1721,
 		date: "25/12/2023",
-		dueDate: "25/12/2023",
+		deliveryDate: "30/06/2024",
+		// dueDate: "25/12/2023",
 		status: "Paid!",
 		currency: "£",
 		path: path.join(__dirname, "invoice.pdf"),
@@ -57,44 +58,46 @@ const payload = {
 /* --------------------------------------------------------------------------
 	Optional: Config
   -------------------------------------------------------------------------- */
-const config = {
-	string: {
-		invoice: "F A C T U A",
-		refNumber: "Referencia",
-		date: "Fecha",
-		dueDate: "Fecha de vencimiento",
-		status: "επί πληρωμή",
-		billTo: "Facturar a",
-		item: "Artículo",
-		quantity: "Cantidad",
-		price: "Precio",
-		tax: "Impuesto",
-		total: "Total",
-		subTotal: "Subtotal",
-		totalTax: "Total Impuesto",
-	},
-	style: {
-		font: "Noto", // "Helvetica", "Times", "Courier"
-		fontSize: 10,
-		lineHeight: 1.2,
-		color: "#000000",
-	},
-	font: {
-		Noto: {
-			normal: path.join(__dirname, "fonts/noto/regular.ttf"),
-			italics: path.join(__dirname, "fonts/noto/italic.ttf"),
-			bold: path.join(__dirname, "fonts/noto/bold.ttf"),
-			bolditalics: path.join(__dirname, "fonts/noto/bold-italic.ttf"),
-		},
-	},
-};
+// const config = {
+// 	string: {
+// 		invoice: "F A C T U A",
+// 		refNumber: "Referencia",
+// 		date: "Fecha",
+// 		dueDate: "Fecha de vencimiento",
+// 		status: "επί πληρωμή",	
+// 		billTo: "Facturar a",
+// 		item: "Artículo",
+// 		quantity: "Cantidad",
+// 		price: "Precio",
+// 		tax: "Impuesto",
+// 		total: "Total",
+// 		subTotal: "Subtotal",
+// 		totalTax: "Total Impuesto",
+// 	},
+// 	style: {
+// 		font: "Noto", // "Helvetica", "Times", "Courier"
+// 		fontSize: 10,
+// 		lineHeight: 1.2,
+// 		color: "#000000",
+// 	},
+// 	font: {
+// 		Noto: {
+// 			normal: path.join(__dirname, "fonts/noto/regular.ttf"),
+// 			italics: path.join(__dirname, "fonts/noto/italic.ttf"),
+// 			bold: path.join(__dirname, "fonts/noto/bold.ttf"),
+// 			bolditalics: path.join(__dirname, "fonts/noto/bold-italic.ttf"),
+// 		},
+// 	},
+// };
 
 /**
  * Generate PDF invoice.
  */
 const createPDF = async () => {
 	try {
-		const invoice = new PDFInvoice(payload, config);
+		console.log("payload :",payload);
+		const invoice = new PDFInvoice(payload);
+		console.log("invoice :",invoice)
 		const result = await invoice.create();
 		console.log("✨ [Success] Invoice created : " + result + "\n");
 	} catch (err) {

@@ -321,10 +321,17 @@ export class PDFInvoice {
 			style: "text",
 		});
 
-		const dueDateLabel = this.config.string.dueDate;
+		// const dueDateLabel = this.config.string.dueDate;
+
+		// sectionCompany.columns[1].stack.push({
+		// 	text: dueDateLabel + ": " + (this.invoice.dueDate || this.date),
+		// 	style: "text",
+		// });
+		
+		const deliveryDateLabel = this.config.string.deliveryDate;
 
 		sectionCompany.columns[1].stack.push({
-			text: dueDateLabel + ": " + (this.invoice.dueDate || this.date),
+			text: deliveryDateLabel + ": " + (this.invoice.deliveryDate || this.date),
 			style: "text",
 		});
 

@@ -64,7 +64,8 @@ const payload = {
     invoice: {
         number: 1721, // String or number.
         date: "25/12/2023", // Default is current date.
-        dueDate: "25/12/2023", // Default is current date.
+        deliveryDate: "25/12/2023", // Default is current date.
+        // dueDate: "25/12/2023", // Default is current date.
         status: "Paid!",
         currency: "€", // Default is "$",
         path: "./invoice.pdf", // Required. Path where you would like to generate the PDF file. 
@@ -143,7 +144,7 @@ This is the information about the invoice. It is an object with the following st
 const invoice = {
     number: 1721, // Required.
     date: "25/12/2023", // Optional. Default is current date.
-    dueDate: "25/12/2023", // Optional. Default is current date.
+    // dueDate: "25/12/2023", // Optional. Default is current date.
     status: "Paid!", // Optional. Default is "Due pending!".
     currency: "€", // Optional. Default is "$".
 }
@@ -291,7 +292,7 @@ const create = async(): Promise<void> => {
             invoice: "F A C T U A",
             refNumber: "Referencia",
             date: "Fecha",
-            dueDate: "Fecha de vencimiento",
+            // dueDate: "Fecha de vencimiento",
             status: "Estado",
             billTo: "Facturar a",
             item: "Artículo",
