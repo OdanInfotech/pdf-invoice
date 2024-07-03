@@ -9,8 +9,6 @@ const defaultConfig = {
 		invoice: "I N V O I C E",
 		refNumber: "Ref no",
 		date: "Date",
-		deliveryDate: "Delivery Date",
-		// dueDate: "Due Date",
 		status: "Status",
 		billTo: "Bill To",
 		item: "Item",

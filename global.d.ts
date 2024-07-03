@@ -24,7 +24,6 @@ export interface InvoiceInfo {
 	label?: string;
 	number: string | number;
 	date: string;
-	deliveryDate: string;
 	status: string;
 	path: string;
 	currency?: string;
@@ -88,7 +87,6 @@ export interface Configuration {
 		invoice?: string;
 		refNumber?: string;
 		date?: string;
-		deliveryDate?: string;
 		status?: string;
 		billTo?: string;
 		item?: string;
