@@ -14,7 +14,7 @@ var u=(s=>typeof require<"u"?require:typeof Proxy<"u"?new Proxy(s,{get:(t,e)=>(t
  ${this.config.string.subTotal}`,`
  ${this.currency}${r.calcSubTotal(this.items)}`],[`
  ${this.config.string.totalTax}`,`
- ${this.config.string.deliveryFee}`,`
+ ${this.invoice.user.region.deliveryFee}`,`
  ${this.currency}${r.calcTax(this.items)}`],[`
  ${this.config.string.total}`,`
  ${this.currency}${r.calcFinalTotal(this.items)}`]]}}]};if(t.push(x),this.payload.qr){let n={margin:[0,50,0,0],qr:this.payload.qr.data,fit:this.payload.qr.width||"50"};t.push(n);}if(this.payload.note){let n={margin:[0,this.payload.qr?20:50,0,0],text:this.payload.note,italics:!0};t.push(n);}return t}};
