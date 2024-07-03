@@ -459,7 +459,7 @@ export class PDFInvoice {
 						body: [
 							[
 								`\n ${this.config.string.deliveryFee}`,
-								`\n ${this.currency}${helper.calcDeliveryFee(this.items)}`,
+								`\n ${this.currency}${helper.this.invoice.deliveryFee}`,
 							],
 							[
 								`\n ${this.config.string.subTotal}`,

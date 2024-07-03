@@ -12,7 +12,7 @@ var u=(s=>typeof require<"u"?require:typeof Proxy<"u"?new Proxy(s,{get:(t,e)=>(t
  ${n.tax||0}%`,`
  ${this.currency}${b}`]);}),t.push(h);let x={margin:[0,20,0,0],columns:[{width:"*",stack:[" "],style:"text"},{width:200,lineHeight:1.5,style:"textBold",table:{widths:[80,"*"],headerRows:1,lineHeight:1.5,body:[[`
  ${this.config.string.subTotal}`,`
- ${this.config.string.deliveryFee}`,`
+ ${this.invoice.deliveryFee}`,`
  ${this.currency}${r.calcSubTotal(this.items)}`],[`
  ${this.config.string.totalTax}`,`
  ${this.currency}${r.calcTax(this.items)}`],[`
