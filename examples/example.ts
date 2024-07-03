@@ -22,7 +22,7 @@ const payload = {
 	invoice: {
 		number: 1721,
 		date: "25/12/2023",
-		deliveryDate: "30/06/2024",
+		// deliveryDate: "30/06/2024",
 		// dueDate: "25/12/2023",
 		status: "Paid!",
 		currency: "£",

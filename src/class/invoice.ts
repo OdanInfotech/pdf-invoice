@@ -458,6 +458,10 @@ export class PDFInvoice {
 						lineHeight: 1.5,
 						body: [
 							[
+								`\n ${this.config.string.deliveryFee}`,
+								`\n ${this.currency}${helper.calcDeliveryFee(this.items)}`,
+							],
+							[
 								`\n ${this.config.string.subTotal}`,
 								`\n ${this.currency}${helper.calcSubTotal(this.items)}`,
 							],

@@ -96,5 +96,6 @@ export interface Configuration {
 		total?: string;
 		subTotal?: string;
 		totalTax?: string;
+		deliveryFee?: string;
 	};
 }
