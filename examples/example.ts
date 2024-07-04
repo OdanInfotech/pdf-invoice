@@ -26,8 +26,6 @@ const payload = {
 		// dueDate: "25/12/2023",
 		status: "Paid!",
 		currency: "£",
-		deliveryFee: 100,
-		discountAmount: 50,
 		path: path.join(__dirname, "invoice.pdf"),
 	},
 	items: [
@@ -36,18 +34,24 @@ const payload = {
 			quantity: 1,
 			price: 400,
 			tax: 13,
+			dscountAmount: 100,
+			deliveryFee: 50
 		},
 		{
 			name: "Domain Registration - example.com",
 			quantity: 1,
 			price: 20,
 			tax: 13.5,
+			dscountAmount: 100,
+			deliveryFee: 50
 		},
 		{
 			name: "Maintenance Charge - Yearly",
 			quantity: 1,
 			price: 300,
 			tax: 0,
+			dscountAmount: 100,
+			deliveryFee: 50
 		},
 	],
 	qr: {
