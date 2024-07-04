@@ -440,6 +440,8 @@ export class PDFInvoice {
 		 *
 		 * @since 1.0.0
 		 */
+
+		console.log("this.config.string :",this.config.string)
 		const sectionTotal = {
 			margin: [0, 20, 0, 0],
 			columns: [

@@ -26,6 +26,7 @@ const payload = {
 		// dueDate: "25/12/2023",
 		status: "Paid!",
 		currency: "£",
+		deliveryFee: 100,
 		path: path.join(__dirname, "invoice.pdf"),
 	},
 	items: [
@@ -95,9 +96,9 @@ const payload = {
  */
 const createPDF = async () => {
 	try {
-		console.log("payload :",payload);
+		// console.log("payload :",payload);
 		const invoice = new PDFInvoice(payload);
-		console.log("invoice :",invoice)
+		// console.log("invoice :",invoice)
 		const result = await invoice.create();
 		console.log("✨ [Success] Invoice created : " + result + "\n");
 	} catch (err) {
