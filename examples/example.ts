@@ -34,7 +34,7 @@ const payload = {
 			quantity: 1,
 			price: 400,
 			tax: 13,
-			dscountAmount: 100,
+			discountAmount: 100,
 			deliveryFee: 50
 		},
 		{
@@ -42,7 +42,7 @@ const payload = {
 			quantity: 1,
 			price: 20,
 			tax: 13.5,
-			dscountAmount: 100,
+			discountAmount: 100,
 			deliveryFee: 50
 		},
 		{
@@ -50,7 +50,7 @@ const payload = {
 			quantity: 1,
 			price: 300,
 			tax: 0,
-			dscountAmount: 100,
+			discountAmount: 100,
 			deliveryFee: 50
 		},
 	],
