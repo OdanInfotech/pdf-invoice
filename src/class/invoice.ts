@@ -464,6 +464,10 @@ export class PDFInvoice {
 								`\n ${this.currency}${helper.this.invoice.deliveryFee}`,
 							],
 							[
+								`\n ${this.config.string.discountAmount}`,
+								`\n ${this.currency}${helper.this.invoice.discountAmount}`,
+							],
+							[
 								`\n ${this.config.string.subTotal}`,
 								`\n ${this.currency}${helper.calcSubTotal(this.items)}`,
 							],

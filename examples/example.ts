@@ -27,6 +27,7 @@ const payload = {
 		status: "Paid!",
 		currency: "£",
 		deliveryFee: 100,
+		discountAmount: 50,
 		path: path.join(__dirname, "invoice.pdf"),
 	},
 	items: [
