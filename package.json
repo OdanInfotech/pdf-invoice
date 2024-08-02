@@ -34,6 +34,8 @@
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
+		"@h1dd3nsn1p3r/pdf-invoice": "^1.0.8",
+		"pdfkit": "^0.15.0",
 		"pdfmake": "^0.2.8"
 	}
 }
