@@ -18,7 +18,7 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
  ${this.config.string.deliveryFee}`,`
  ${this.currency}${r.calcDeliveryFee(this.items)}`],[`
  ${this.config.string.paymentMethod}`,`
- ${r.calcPaymentMethod(this.items)}`],[`
+ ${r.calcPaymentMethod(this.invoice)}`],[`
  ${this.config.string.discountAmount}`,`
  ${this.currency}${r.calcDiscountAmount(this.items)}`],[`
  ${this.config.string.total}`,`
