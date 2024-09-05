@@ -15,7 +15,7 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
  ${n.quantity}`,`
  ${this.currency}${n.price}`,`
  ${n.tax||0}%`,`
- ${this.currency}${b}`]);}),t.push(m);let x={margin:[0,-100,0,0],columns:[{width:"*",stack:[" "],style:"text"},{width:200,lineHeight:1.5,style:"textBold",table:{widths:[80,"*"],headerRows:1,lineHeight:1.5,body:[[`
+ ${this.currency}${b}`]);}),t.push(m);let x={margin:[0,-120,0,0],columns:[{width:"*",stack:[" "],style:"text"},{width:200,lineHeight:1.5,style:"textBold",table:{widths:[80,"*"],headerRows:1,lineHeight:1.5,body:[[`
  ${this.config.string.subTotal}`,`
  ${this.currency}${r.calcSubTotal(this.items)}`,`
  ${this.currency}${this.invoice.deliveryFee}`],[`
