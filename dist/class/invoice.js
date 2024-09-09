@@ -30,7 +30,7 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
  ${this.currency}${r.calcFinalTotal(this.items)}`]]
             }
             }]
-        }; b.columns[1].stack.push(x),t.push(b); if(this.payload.qr){let n={margin:[0,50,0,0],qr:this.payload.qr.data,fit:this.payload.qr.width||"50"};t.push(n);}if(this.payload.note){let n={margin:[0,this.payload.qr?20:50,0,0],fontSize: 10,text:this.payload.note,italics:!0};t.push(n);}return t}};
+        }; b.columns[1].stack.push(x),t.push(b); if(this.payload.qr){let n={margin:[0,50,0,0],qr:this.payload.qr.data,fit:this.payload.qr.width||"50"};t.push(n);}if(this.payload.note){let n={margin:[0,this.payload.qr?20:50,0,0],fontSize: 5,text:this.payload.note,italics:!0};t.push(n);}return t}};
 
 exports.PDFInvoice = p;
 //# sourceMappingURL=out.js.map
