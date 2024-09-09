@@ -12,18 +12,14 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
  ${this.config.string.item}`,`
  ${this.config.string.quantity}`,`
  ${this.config.string.price}`,`
- ${this.config.string.tax}`,`
  ${this.config.string.total}`]]}};this.items.length>0&&this.items.forEach(n=>{let b=r.calcItemTotal(n);m.table.body.push([`
  ${n.name}`,`
  ${n.quantity}`,`
  ${this.currency}${n.price}`,`
- ${n.tax||0}%`,`
- ${this.currency}${b}`]);}),b.columns[0].stack.push(x);let x={margin:[-30,0,100,0],columns:[
-    {width:"*",style:"text"},{width:150,lineHeight:1.5,style:"textBold",table:{widths:[80,"*"],headerRows:1,lineHeight:1.5,body:[[`
+ ${this.currency}${b}`]);}),b.columns[0].stack.push(m);let x={margin:[-30,0,100,0],columns:[
+    {width:"*",stack:[" "],style:"text"},{width:150,lineHeight:1.5,style:"textBold",table:{widths:[80,"*"],headerRows:1,lineHeight:1.5,body:[[`
  ${this.config.string.subTotal}`,`
  ${this.currency}${r.calcSubTotal(this.items)}`],[`
- ${this.config.string.totalTax}`,`
- ${this.currency}${r.calcTax(this.items)}`],[`
  ${this.config.string.deliveryFee}`,`
  ${this.currency}${r.calcDeliveryFee(this.items)}`],[`
  ${this.config.string.paymentMethod}`,`
@@ -34,7 +30,7 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
  ${this.currency}${r.calcFinalTotal(this.items)}`]]
             }
             }]
-        }; b.columns[1].stack.push(m),t.push(b); if(this.payload.qr){let n={margin:[0,50,0,0],qr:this.payload.qr.data,fit:this.payload.qr.width||"50"};t.push(n);}if(this.payload.note){let n={margin:[0,this.payload.qr?20:50,0,0],text:this.payload.note,italics:!0};t.push(n);}return t}};
+        }; b.columns[1].stack.push(x),t.push(b); if(this.payload.qr){let n={margin:[0,50,0,0],qr:this.payload.qr.data,fit:this.payload.qr.width||"50"};t.push(n);}if(this.payload.note){let n={margin:[0,this.payload.qr?20:50,0,0],text:this.payload.note,italics:!0};t.push(n);}return t}};
 
 exports.PDFInvoice = p;
 //# sourceMappingURL=out.js.map
