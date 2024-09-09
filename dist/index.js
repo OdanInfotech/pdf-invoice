@@ -6,7 +6,7 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
         b = { columns: [{ width: "65%", stack: [], style: "text" }, { width: "35%", stack: [], style: "text" }] },
         e = { columns: [{ width: "65%", stack: [], style: "text" }, { width: "35%", stack: [], style: "text" }] }; if (this.company.logo) { if (!this.company.logo.startsWith("<svg")) throw new Error("Only SVG logo are supported."); e.columns[0].stack.unshift({ svg: this.company.logo, margin: [0, 0, 0, 20] }), e.columns[0].stack.push({ text: this.company.name, style: "h3" }); } else e.columns[0].stack.unshift({ text: this.company.name, style: "h2" }); this.company.phone && e.columns[0].stack.push({ text: this.company.phone, style: "text" }), this.company.email && e.columns[0].stack.push({ columns: [{ margin: [0, 0, 0, 20], stack: [{ text: this.company.email }], style: "text" }] }), this.invoice.label ? e.columns[1].stack.unshift({ text: this.invoice.label, style: "h1" }) : e.columns[1].stack.unshift({ text: this.config.string.invoice || "I N V O I C E", style: "h1" }); let c = this.config.string.refNumber || "Ref no :"; e.columns[1].stack.push({ text: c + ": #" + (this.invoice.number || 1), style: "textBold" }); let a = this.config.string.date; e.columns[1].stack.push({ text: a + ": " + (this.invoice.date || this.date), style: "textBold" }); e.columns[1].stack.push({ columns: [{ width: 300, margin: [0, 15, 0, 0], stack: [{ text: this.config.string.billTo, style: "h2" }], style: "text" }] }); this.customer.name && e.columns[1].stack.push({ text: this.customer.name, style: "textBold" }), this.customer.company && e.columns[1].stack.push({ text: this.customer.company, style: "text" }), this.customer.phone && e.columns[1].stack.push({ text: this.customer.phone, style: "text" }); t.push(e); let m = {
         margin: [0,0, 0, 0], lineHeight: 1.5, table: {
-            widths: [110, 30, 50, 80], headerRows: 1, lineHeight: 1.2, body: [[`
+            widths: [110, 30, 50, 80], headerRows: 1, lineHeight: 1.1, body: [[`
  ${this.config.string.item}`,`
  ${this.config.string.quantity}`,`
  ${this.config.string.price}`,`
@@ -14,7 +14,7 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
  ${n.name}`,`
  ${n.quantity}`,`
  ${this.currency}${n.price}`,`
- ${this.currency}${b}`]);}),b.columns[0].stack.push(m);let x={margin:[-30,0,0,0],columns:[
+ ${this.currency}${b}`]);}),b.columns[0].stack.push(m);let x={margin:[-30,0,100,0],columns:[
     {width:"*",stack:[" "],style:"text"},{width:150,lineHeight:1.5,style:"textBold",table:{widths:[80,"*"],headerRows:1,lineHeight:1.5,body:[[`
  ${this.config.string.subTotal}`,`
  ${this.currency}${r.calcSubTotal(this.items)}`],[`
