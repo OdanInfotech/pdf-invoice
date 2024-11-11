@@ -73,18 +73,30 @@ const payload = {
     items: [
         {
             name: "Cloud VPS Server - Starter Plan",
+            shapeName: "Circle",
+            flavourName: "Black Current",
+            toppingName: "Chocolate",
+            colorCode: "#11111",
             quantity: 1,
             price: 400,
             tax: 0, // Specify tax in percentage. Default is 0.
         },
         {
             name: "Domain Registration - example.com",
+            shapeName: "Circle",
+            flavourName: "Black Current",
+            toppingName: "Chocolate",
+            colorCode: "#11111",
             quantity: 1,
             price: 20,
             tax: 0, // Specify tax in percentage. Default is 0.
         },
         {
             name: "Maintenance Charge - Yearly",
+            shapeName: "Circle",
+            flavourName: "Black Current",
+            toppingName: "Chocolate",
+            colorCode: "#11111",
             quantity: 1,
             price: 300,
             tax: 0, // Specify tax in percentage. Default is 0.
@@ -189,18 +201,30 @@ Items are the products or services that you are selling. It is an `array` of obj
 const items = [
     {
         name: "Cloud VPS Server - Starter Plan", // Required.
+        shapeName: "Circle",
+        flavourName: "Black Current",
+        toppingName: "Chocolate",
+        colorCode: "#11111",
         quantity: 1, // Required.
         price: 400, // Required.
         tax: 0, // Optional. Specify tax in percentage. Default is 0.
     },
     {
         name: "Domain Registration - example.com", // Required.
+        shapeName: "Circle",
+        flavourName: "Black Current",
+        toppingName: "Chocolate",
+        colorCode: "#11111",
         quantity: 1, // Required.
         price: 20, // Required.
         tax: 0, // Optional. Specify tax in percentage. Default is 0.
     },
     {
         name: "Maintenance Charge - Yearly", // Required.
+        shapeName: "Circle",
+        flavourName: "Black Current",
+        toppingName: "Chocolate",
+        colorCode: "#11111",
         quantity: 1, // Required.
         price: 300, // Required.
         tax: 0, // Optional. Specify tax in percentage. Default is 0.
@@ -214,6 +238,10 @@ The `name`, `quantity` and `price` of the item is required. Rest of the fields a
 const items = [
     {
         name: "Cloud VPS Server - Starter Plan", // Required.
+        shapeName: "Circle", // Required.
+        flavourName: "Black Current", // Required.
+        toppingName: "Chocolate",
+        colorCode: "#11111", // Required.
         quantity: 1, // Required.
         price: 400, // Required.
         tax: 0, // Optional. Specify tax in percentage. Default is 0.

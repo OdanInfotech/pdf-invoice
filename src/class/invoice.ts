@@ -410,6 +410,10 @@ export class PDFInvoice {
 				body: [
 					[
 						`\n ${this.config.string.item}`,
+						`\n ${this.config.string.shapeName}`,
+						`\n ${this.config.string.flavourName}`,
+						`\n ${this.config.string.toppingName}`,
+						`\n ${this.config.string.colorCode}`,
 						`\n ${this.config.string.quantity}`,
 						`\n ${this.config.string.price}`,
 						`\n ${this.config.string.tax}`,
@@ -418,13 +422,16 @@ export class PDFInvoice {
 				] as any,
 			},
 		};
-
 		if (this.items.length > 0) {
 			this.items.forEach((item) => {
 				const totalPrice = helper.calcItemTotal(item);
 
 				sectionItems.table.body.push([
 					`\n ${item.name}`,
+					`\n ${item.shapeName}`,
+					`\n ${item.flavourName}`,
+					`\n ${item.toppingName}`,
+					`\n ${item.colorCode}`,
 					`\n ${item.quantity}`,
 					`\n ${this.currency}${item.price}`,
 					`\n ${item.tax || 0}%`,

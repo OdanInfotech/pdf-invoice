@@ -31,6 +31,10 @@ export interface InvoiceInfo {
 
 export interface ItemInfo {
 	name: string;
+	shapeName: string;
+	flavourName: string;
+	toppingName: string;
+	colorCode: string;
 	quantity: number;
 	price: number;
 	tax?: number;
@@ -90,7 +94,11 @@ export interface Configuration {
 		status?: string;
 		billTo?: string;
 		item?: string;
-		quantity?: string;
+		shapeName?: string;
+		flavourName?: string;
+		toppingName?: string;
+		colorCode?: string;
+		quantity?: number;
 		price?: string;
 		tax?: string;
 		total?: string;

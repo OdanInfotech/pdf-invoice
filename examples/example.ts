@@ -1,5 +1,6 @@
 const path = require("path");
 const { PDFInvoice } = require("../dist/index");
+console.log("PDFInvoice :",PDFInvoice);
 const pdfMake = require('pdfmake/build/pdfmake');
 const pdfFonts = require('pdfmake/build/vfs_fonts');
 
@@ -33,6 +34,10 @@ const payload = {
 	items: [
 		{
 			name: "Cloud VPS Server - Starter Plan",
+			shapeName: "Circle",
+            flavourName: "Black Current",
+            toppingName: "Chocolate",
+            colorCode: "#11111",
 			quantity: 1,
 			price: 400,
 			tax: 13,
@@ -41,6 +46,10 @@ const payload = {
 		},
 		{
 			name: "Domain Registration - example.com",
+			shapeName: "Circle",
+            flavourName: "Black Current",
+            toppingName: "Chocolate",
+            colorCode: "#11111",
 			quantity: 1,
 			price: 20,
 			tax: 13.5,
@@ -49,6 +58,10 @@ const payload = {
 		},
 		{
 			name: "Maintenance Charge - Yearly",
+			shapeName: "Circle",
+            flavourName: "Black Current",
+            toppingName: "Chocolate",
+            colorCode: "#11111",
 			quantity: 1,
 			price: 300,
 			tax: 0,
@@ -116,6 +129,10 @@ const config = {
 		status: "حالة",	
 		billTo: reverseText("مشروع قانون ل"),
 		item: "Artículo",
+		shapeName: "Circle",
+		flavourName: "Black Current",
+		toppingName: "Chocolate",
+		colorCode: "#11111",
 		quantity: "Cantidad",
 		price: "Precio",
 		tax: "Impuesto",
@@ -149,12 +166,12 @@ const config = {
 	},
 };
 
-const content = [
-	{
-		// text: 'مرحبا بالعالم',  // Example text in Arabic (RTL)
-		direction: 'rtl'       // Set text direction to RTL
-	}
-];
+// const content = [
+// 	{
+// 		// text: 'مرحبا بالعالم',  // Example text in Arabic (RTL)
+// 		direction: 'rtl'       // Set text direction to RTL
+// 	}
+// ];
 
 /**
  * Generate PDF invoice.
@@ -190,6 +207,7 @@ const createPDF = async () => {
 			direction: "rtl"
 		}
 	);
+	console.log("invoice :",invoice.items[0]);
   
   // Generate the PDF
   invoice.create().then((pdf: any) => {
