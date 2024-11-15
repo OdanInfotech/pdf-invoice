@@ -33,16 +33,22 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
                 }
               }
         }; this.items.length > 0 && this.items.forEach(n => {
+          let colorRow = "";
+          if(`${n.colorCode}` == null || `${n.colorCode}` == ""){  
+            colorRow = { text: `${n.colorCode}`, fontSize:7 };
+          }else{
+            colorRow = { 
+              canvas: [
+                { type: 'rect', x: 0, y: 0, w: 20, h: 10, color: `${n.colorCode}` }
+              ]
+            }
+          }
             let b = r.calcItemTotal(n); m.table.body.push([
               { text: `${n.name}`, fontSize:7 },
               { text: `${n.shapeName}`, fontSize:7 },
               { text: `${n.flavourName}`, fontSize:7 },
               { text: `${n.toppingName}`, fontSize:7 },
-              { 
-                canvas: [
-                  { type: 'rect', x: 0, y: 0, w: 20, h: 10, color: `${n.colorCode}` }
-                ]
-              },
+              colorRow,
               { text: `${n.quantity}`, fontSize:7 },
               { text: `${this.currency}${n.price}`, fontSize:7 },
               { text: `${this.currency}${b}`, fontSize:7 },
