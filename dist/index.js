@@ -33,15 +33,20 @@ var u = (s => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(s,
                 }
               }
         }; this.items.length > 0 && this.items.forEach(n => {
-            let b = r.calcItemTotal(n); m.table.body.push([`
- ${n.name}`,`
- ${n.shapeName}`,`
- ${n.flavourName}`,`
- ${n.toppingName}`,`
- ${n.colorCode}`,`
- ${n.quantity}`,`
- ${this.currency}${n.price}`,`
- ${this.currency}${b}`]);}),b.columns[0].stack.push(m);let x={margin:[-20,10,100,0],columns:[
+            let b = r.calcItemTotal(n); m.table.body.push([
+              { text: `${n.name}`, fontSize:7 },
+              { text: `${n.shapeName}`, fontSize:7 },
+              { text: `${n.flavourName}`, fontSize:7 },
+              { text: `${n.toppingName}`, fontSize:7 },
+              { 
+                canvas: [
+                  { type: 'rect', x: 0, y: 0, w: 20, h: 10, color: `${n.colorCode}` }
+                ]
+              },
+              { text: `${n.quantity}`, fontSize:7 },
+              { text: `${this.currency}${n.price}`, fontSize:7 },
+              { text: `${this.currency}${b}`, fontSize:7 },
+]);}),b.columns[0].stack.push(m);let x={margin:[-20,10,100,0],columns:[
     {width:"*",stack:[" "],style:"text"},{width:150,fontSize:7,lineHeight:1.5,style:"textBold",layout: {
         hLineWidth: function(i, node) {
           return 0.5;
